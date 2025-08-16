@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Sobha Aranya — Full Landing Page (Joginder Properties)
+    Replace placeholders:
+      IMAGE_URL_HERO.jpg, IMAGE_URL_1.jpg, IMAGE_URL_2.jpg, IMAGE_URL_3.jpg
+      MAP_EMBED_URL
+      YOUR_FORMS_ENDPOINT  (your webhook / CRM / Formspree endpoint)
+      YOUR_WHATSAPP_NUMBER (e.g. 919711197200)
+      YOUR_PHONE (e.g. +91 9711197200)
+      SITE_URL (your canonical page URL)
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sobha Aranya at Karma Lakelands | Joginder Properties | Luxury Residences Gurgaon</title>
+  <meta name="description" content="Sobha Aranya at Karma Lakelands – luxury residences across 31.28 acres within the 270-acre Karma Lakelands Golf Resort. 5 towers, 524 residences, 75,000 sq.ft clubhouse, 85% open greens. Presented by Joginder Properties." />
+  <link rel="canonical" href="https://www.joginderproperties.com/sobha-aranya" />
+  <meta name="theme-color" content="#0f1a24">
+  <meta name="format-detection" content="telephone=no">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sobha Aranya at Karma Lakelands – Luxury Redefined" />
+  <meta property="og:description" content="Exclusive residences across 31.28 acres inside Karma Lakelands Golf Resort. 5 Towers • 524 Residences • 75,000 sq.ft. Clubhouse • 85% green area. Contact Joginder Properties." />
+  <meta property="og:image" content="IMAGE_URL_HERO.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.joginderproperties.com/sobha-aranya" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:#07121a; --card:#0f1a24; --muted:#9fb0bf; --text:#eaf2f8; --gold:#d4af37; --accent:#2fd08a;
+      --max:1200px; --radius:14px; --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#061018,#07121a);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.45}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%;height:auto}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;gap:.6rem;background:linear-gradient(135deg,var(--gold),#f6e9b6);color:#0f1112;font-weight:700;padding:.85rem 1.1rem;border-radius:999px;border:0;cursor:pointer;box-shadow:var(--shadow)}
+    .btn.alt{background:transparent;border:1px solid rgba(212,175,55,.18);color:var(--text)}
+    .tag{display:inline-block;padding:.35rem .7rem;border-radius:999px;color:#f8f3d3;background:rgba(212,175,55,.12);font-weight:600}
+    /* Hero */
+    .hero{position:relative;min-height:88vh;display:grid;place-items:center;overflow:hidden}
+    .hero .bg{position:absolute;inset:0;background:url('IMAGE_URL_HERO.jpg') center/cover no-repeat;filter:contrast(.98) saturate(1.05);opacity:.48}
+    .hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,10,14,.18),rgba(6,10,14,.78))}
+    .hero .content{position:relative;z-index:2;padding:56px 20px;text-align:center;max-width:920px}
+    .hero h1{font-size:clamp(26px,4vw,48px);margin:0 0 12px}
+    .lead{color:var(--muted);font-size:clamp(14px,1.6vw,18px);margin:0 auto 18px;max-width:760px}
+    .badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
+    /* Sections */
+    .section{padding:56px 0}
+    .card{background:linear-gradient(180deg,#07141b,#091821);border:1px solid rgba(255,255,255,.03);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .grid{display:grid;gap:20px}
+    .highlights{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .highlight{display:flex;gap:12px;align-items:flex-start}
+    .highlight svg{width:36px;height:36px;color:var(--gold);flex:0 0 36px}
+    h2{font-size:clamp(20px,2.6vw,32px);margin:0 0 14px;color:var(--gold)}
+    .muted{color:var(--muted)}
+    /* Gallery */
+    .gallery{position:relative;border-radius:var(--radius);overflow:hidden}
+    .viewport{overflow:hidden;border-radius:var(--radius)}
+    .track{display:flex;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+    .slide{min-width:100%;aspect-ratio:16/9;background:#0b1620;display:flex;align-items:center;justify-content:center}
+    .nav{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:0 8px}
+    .nav button{background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.06);color:#fff;width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center}
+    /* Pricing */
+    .pricing{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+    .price{display:flex;align-items:center;gap:10px}
+    /* Location & Form */
+    .loc{grid-template-columns:1.1fr .9fr;align-items:start}
+    .map{width:100%;min-height:320px;border-radius:12px;border:0;box-shadow:var(--shadow);background:#08121a}
+    form{display:grid;gap:12px}
+    input,select,textarea{background:#071621;border:1px solid rgba(255,255,255,.03);color:var(--text);padding:12px;border-radius:10px;font-size:15px}
+    input:focus,select:focus,textarea:focus{outline:2px solid rgba(212,175,55,.16);border-color:var(--gold)}
+    .sticky{position:sticky;top:18px}
+    .consent{display:flex;gap:8px;align-items:flex-start;color:var(--muted);font-size:.92rem}
+    /* CTA bar (mobile) */
+    .cta-bar{position:fixed;inset:auto 0 0 0;background:#07121a;padding:10px 18px;border-top:1px solid rgba(255,255,255,.03);display:none;z-index:80;gap:12px;align-items:center;justify-content:center}
+    .whatsapp-fab{position:fixed;right:14px;bottom:92px;z-index:90}
+    .toast{position:fixed;right:18px;bottom:18px;background:#0f1a24;border:1px solid #224;color:#dff1e6;padding:12px 14px;border-radius:10px;box-shadow:var(--shadow);display:none}
+    footer{padding:40px 20px;color:var(--muted);border-top:1px dashed rgba(255,255,255,.03)}
+    .disclaimer{font-size:.85rem;color:var(--muted)}
+    @media (max-width:920px){ .loc{grid-template-columns:1fr} .sticky{position:relative;top:auto} }
+    @media (max-width:760px){ .cta-bar{display:flex} .hero{min-height:74vh} .hero .content{padding:32px} }
+  </style>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"RealEstateAgent",
+        "name":"Joginder Properties",
+        "url":"https://www.joginderproperties.com",
+        "telephone":"+91 9711197200",
+        "logo":"https://www.joginderproperties.com/logo.png",
+        "areaServed":["Gurugram","Delhi NCR"]
+      },
+      {
+        "@type":"Residence",
+        "name":"Sobha Aranya at Karma Lakelands",
+        "description":"Luxury residences inside Karma Lakelands Golf Resort. 31.28 acres, 5 towers, 524 residences, 75,000 sq.ft clubhouse, 85% green area.",
+        "address":{"@type":"PostalAddress","addressLocality":"Sector 80","addressRegion":"Gurugram","addressCountry":"IN"},
+        "numberOfRooms":"3-4 BHK",
+        "amenityFeature":[
+          {"@type":"LocationFeatureSpecification","name":"Golf Greens & Lake Views","value":true},
+          {"@type":"LocationFeatureSpecification","name":"Large Clubhouse (75,000 sq.ft.)","value":true}
+        ],
+        "offers":{
+          "@type":"AggregateOffer",
+          "lowPrice":"71000000",
+          "highPrice":"100000000",
+          "priceCurrency":"INR",
+          "availability":"https://schema.org/LimitedAvailability"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Mobile CTA Bar -->
+  <div class="cta-bar" role="region" aria-label="Quick actions">
+    <a class="btn" href="#enquire">Enquire</a>
+    <a class="btn alt" href="https://wa.me/919711197200?text=Hi%2C%20I%27m%20interested%20in%20Sobha%20Aranya" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero" role="banner" aria-label="Sobha Aranya at Karma Lakelands">
+    <div class="bg" aria-hidden="true"></div>
+    <div class="overlay" aria-hidden="true"></div>
+    <div class="content wrap">
+      <div class="badges">
+        <span class="tag">New Launch</span>
+        <span class="tag">Sector 80 • Karma Lakelands</span>
+        <span class="tag">Price ₹7.1 Cr – ₹10 Cr</span>
+      </div>
+
+      <h1>Sobha Aranya at Karma Lakelands — Luxury Redefined</h1>
+      <p class="lead">An exclusive residential enclave across <strong>31.28 acres</strong> inside the 270-acre Karma Lakelands Golf Resort. 5 towers • 524 residences • 75,000 sq.ft. clubhouse • 85% open green area.</p>
+
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:12px">
+        <a class="btn" href="#enquire" aria-label="Enquire Now">📞 Enquire Now</a>
+        <a class="btn alt" href="https://wa.me/919711197200?text=Hi%2C%20I%27m%20interested%20in%20Sobha%20Aranya%20at%20Karma%20Lakelands" target="_blank" rel="noopener">💬 WhatsApp Joginder</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Project Highlights -->
+  <section class="section" aria-labelledby="highlights">
+    <div class="wrap">
+      <h2 id="highlights">Project Highlights</h2>
+      <div class="grid highlights">
+        <div class="card highlight">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l7 7v11H5V9l7-7z" stroke="currentColor" stroke-width="1.2"/></svg>
+          <div>
+            <strong>Total Area</strong>
+            <div class="muted">31.28 acres (Phase 1: 14.81 acres)</div>
+          </div>
+        </div>
+
+        <div class="card highlight">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h18" stroke="currentColor" stroke-width="1.2"/></svg>
+          <div>
+            <strong>Inventory</strong>
+            <div class="muted">5 Towers • 524 Residences • Density: 35 families/acre</div>
+          </div>
+        </div>
+
+        <div class="card highlight">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.2"/></svg>
+          <div>
+            <strong>Clubhouse</strong>
+            <div class="muted">75,000 sq.ft. (G+2) with 40+ world-class amenities</div>
+          </div>
+        </div>
+
+        <div class="card highlight">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2 12h20" stroke="currentColor" stroke-width="1.2"/></svg>
+          <div>
+            <strong>Green Cover</strong>
+            <div class="muted">85% open & landscaped area — golf & lake vistas</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section" aria-labelledby="galleryH">
+    <div class="wrap">
+      <h2 id="galleryH">Gallery</h2>
+      <div class="card gallery">
+        <div class="viewport" aria-hidden="true">
+          <div class="track" id="track">
+            <div class="slide"><img loading="lazy" src="IMAGE_URL_1.jpg" alt="Sobha Aranya exterior render"></div>
+            <div class="slide"><img loading="lazy" src="IMAGE_URL_2.jpg" alt="Living area with premium finishes"></div>
+            <div class="slide"><img loading="lazy" src="IMAGE_URL_3.jpg" alt="Golf & lake view from balcony"></div>
+          </div>
+        </div>
+        <div class="nav" aria-hidden="true">
+          <button id="prev" aria-label="Previous image">‹</button>
+          <button id="next" aria-label="Next image">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Residences -->
+  <section class="section" aria-labelledby="residences">
+    <div class="wrap">
+      <h2 id="residences">Residences & Configurations</h2>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+        <div class="card">
+          <strong>Tower 2</strong>
+          <div class="muted">2 residences per floor</div>
+          <ul class="muted">
+            <li>Wing 1 – 3,761 sq.ft. (4BR + DH)</li>
+            <li>Wing 2 – 4,240 sq.ft. (4BR + DH)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Tower 3</strong>
+          <div class="muted">2 residences per floor</div>
+          <ul class="muted">
+            <li>Wing 1 – 4,285 sq.ft. (4BR + DH)</li>
+            <li>Wing 2 – 3,691 sq.ft. (4BR + DH)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Towers 4 & 5</strong>
+          <div class="muted">3 residences per floor</div>
+          <ul class="muted">
+            <li>Nose Wing – 2,836 sq.ft. (3BR + MU)</li>
+            <li>Wing 2 – 3,595 sq.ft. (4BR + DH)</li>
+            <li>Wing 3 – 3,532 sq.ft. (4BR + DH)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <strong>Parking</strong>
+          <div class="muted">4BR + DH: 3 car parks • 3BR + MU: 2 car parks</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lifestyle & Amenities -->
+  <section class="section" aria-labelledby="amenities">
+    <div class="wrap">
+      <h2 id="amenities">Lifestyle & Amenities</h2>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+        <div class="card">
+          <strong>Clubhouse (75,000 sq.ft.)</strong>
+          <div class="muted">G+2 floors with spa, indoor lounge, fine dining, pool & more</div>
+        </div>
+        <div class="card">
+          <strong>40+ Amenities</strong>
+          <div class="muted">Wellness, sports, children’s zones, landscaped courts & jogging tracks</div>
+        </div>
+        <div class="card">
+          <strong>Golf Resort Living</strong>
+          <div class="muted">Located within the 270-acre Karma Lakelands Golf Resort with lake & green vistas</div>
+        </div>
+        <div class="card">
+          <strong>Open Greens</strong>
+          <div class="muted">85% open area for sunlight, ventilation & privacy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location + Form -->
+  <section class="section" id="enquire" aria-labelledby="enqH">
+    <div class="wrap grid loc" style="gap:22px">
+      <div>
+        <h2 id="enqH">Location Advantages</h2>
+        <div class="card muted" style="padding:18px;line-height:1.5">
+          <ul>
+            <li>Inside Karma Lakelands — a 270-acre luxury golf resort</li>
+            <li>Sector 80, Gurugram — premium neighbourhood with HNI community</li>
+            <li>Excellent connectivity to NH-8, Dwarka Expressway & regional hubs</li>
+            <li>Close to lifestyle centres, corporate hubs & the airport</li>
+          </ul>
+        </div>
+
+        <iframe class="map" title="Map – Karma Lakelands" loading="lazy" src="MAP_EMBED_URL"></iframe>
+      </div>
+
+      <aside class="sticky">
+        <div class="card">
+          <h2 style="margin:0 0 6px">Book Your Private Tour</h2>
+          <p class="muted" style="margin:0 0 12px">Schedule an exclusive viewing with Joginder Properties. Founder & CEO: Joginder Yadav.</p>
+
+          <form id="leadForm" novalidate>
+            <!-- UTM placeholders -->
+            <input type="hidden" name="utm_source" id="utm_source">
+            <input type="hidden" name="utm_medium" id="utm_medium">
+            <input type="hidden" name="utm_campaign" id="utm_campaign">
+            <label class="muted" style="font-size:.9rem">Full Name</label>
+            <input type="text" name="name" id="name" placeholder="Your full name" required>
+
+            <label class="muted" style="font-size:.9rem">Mobile (WhatsApp)</label>
+            <input type="tel" name="phone" id="phone" placeholder="+91 9XXXXXXXXX" required inputmode="tel">
+
+            <label class="muted" style="font-size:.9rem">Email</label>
+            <input type="email" name="email" id="email" placeholder="you@example.com" inputmode="email">
+
+            <label class="muted" style="font-size:.9rem">Budget</label>
+            <select name="budget" id="budget" required>
+              <option value="">Select Budget</option>
+              <option>₹7–8 Cr</option>
+              <option>₹8–9 Cr</option>
+              <option>₹9–10 Cr</option>
+              <option>₹10+ Cr</option>
+            </select>
+
+            <label class="muted" style="font-size:.9rem">Preferred Visit Date</label>
+            <input type="date" name="visit_date" id="visit_date">
+
+            <label class="consent"><input type="checkbox" id="consent" required style="margin-top:3px"> <span>I agree to be contacted via phone/WhatsApp & email about Sobha Aranya. <a href="#privacy" class="muted">Privacy</a></span></label>
+
+            <div style="display:flex;gap:10px;margin-top:8px">
+              <button type="submit" class="btn" aria-label="Schedule Site Visit">🚘 Schedule Site Visit</button>
+              <a class="btn alt" target="_blank" rel="noopener" id="waBtn"
+                 href="https://wa.me/919711197200?text=Hi%2C%20please%20share%20Sobha%20Aranya%20details.">WhatsApp Now</a>
+            </div>
+
+            <div id="formNote" class="muted" style="min-height:22px;margin-top:10px"></div>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Why Choose + CTA -->
+  <section class="section">
+    <div class="wrap">
+      <div class="grid" style="grid-template-columns:1fr 1fr;gap:20px">
+        <div class="card">
+          <h2>Why Choose Sobha Aranya</h2>
+          <ul class="muted" style="line-height:1.6">
+            <li>Prestigious Sobha brand quality and craftsmanship</li>
+            <li>Rare, low-density address within a resort-style golf community</li>
+            <li>Strong long-term appreciation potential in Gurugram’s premium micro-market</li>
+            <li>Comprehensive lifestyle & managed services for HNIs & global buyers</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Quick Actions</h2>
+          <p class="muted">Limited inventory. Reserve an exclusive viewing or request the price sheet.</p>
+          <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
+            <a class="btn" href="#enquire">Request Site Visit</a>
+            <a class="btn alt" href="https://wa.me/919711197200?text=Please%20share%20Sobha%20Aranya%20price%20sheet" target="_blank">Request Price Sheet (WhatsApp)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="wrap" aria-labelledby="footH">
+    <h3 id="footH" style="margin:0 0 8px">Joginder Properties</h3>
+    <p class="muted" style="margin:0 0 6px">Founder &amp; CEO: Joginder Yadav | 📞 <a href="tel:+919711197200" style="color:var(--text)">+91 9711197200</a> | 🌐 <a href="https://www.joginderproperties.com" target="_blank" rel="noopener">www.joginderproperties.com</a></p>
+    <p class="disclaimer" id="privacy">Disclaimer: This is a marketing page for information purposes only. All images are artistic impressions. Prices & availability are subject to change at the developer’s discretion.</p>
+    <p class="muted" style="margin-top:12px">© <span id="year"></span> Joginder Properties. All rights reserved.</p>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <div class="whatsapp-fab">
+    <a class="btn" href="https://wa.me/919711197200?text=Hi%2C%20please%20share%20Sobha%20Aranya%20details" target="_blank" rel="noopener">💬 WhatsApp</a>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite">Thanks! We’ll be in touch shortly.</div>
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // gallery
+    (function(){
+      const track = document.getElementById('track');
+      const slides = Array.from(track.children);
+      let idx = 0;
+      function show(i){ track.style.transform = `translateX(-${i*100}%)`; }
+      document.getElementById('prev').addEventListener('click', ()=>{ idx = (idx-1 + slides.length)%slides.length; show(idx); });
+      document.getElementById('next').addEventListener('click', ()=>{ idx = (idx+1)%slides.length; show(idx); });
+      setInterval(()=>{ idx = (idx+1)%slides.length; show(idx); }, 6000);
+    })();
+
+    // capture UTM params
+    (function(){
+      const params = new URLSearchParams(location.search);
+      ['utm_source','utm_medium','utm_campaign'].forEach(k=>{
+        const el = document.getElementById(k);
+        if(el) el.value = params.get(k) || '';
+      });
+    })();
+
+    // form handling
+    (function(){
+      const form = document.getElementById('leadForm');
+      const note = document.getElementById('formNote');
+      const toast = document.getElementById('toast');
+
+      function validEmail(e){ return !e || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
+      function validPhone(p){ return /^[+]?\d[\d\s-]{7,}$/.test(p); }
+
+      form.addEventListener('submit', async (ev)=>{
+        ev.preventDefault();
+        note.textContent = '';
+        const name = form.name.value.trim();
+        const phone = form.phone.value.trim();
+        const email = form.email.value.trim();
+        const budget = form.budget.value;
+        const visit_date = form.visit_date.value;
+        const consent = document.getElementById('consent').checked;
+
+        if(!name || !validPhone(phone) || !consent){
+          note.textContent = 'Please enter a valid name, phone and accept contact consent.';
+          return;
+        }
+        if(email && !validEmail(email)){
+          note.textContent = 'Please enter a valid email address.';
+          return;
+        }
+
+        // payload
+        const payload = {
+          name, phone, email, budget, visit_date,
+          utm_source: document.getElementById('utm_source').value || null,
+          utm_medium: document.getElementById('utm_medium').value || null,
+          utm_campaign: document.getElementById('utm_campaign').value || null,
+          project: 'Sobha Aranya at Karma Lakelands',
+          source: 'Landing Page - Joginder Properties'
+        };
+
+        try {
+          // POST to your endpoint (replace YOUR_FORMS_ENDPOINT)
+          const res = await fetch('YOUR_FORMS_ENDPOINT', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(payload)
+          });
+
+          // If you use a service that requires form-encoded, swap accordingly.
+          if(!res.ok) throw new Error('Network');
+
+          // open WhatsApp prefilled (optional)
+          const wmsg = encodeURIComponent(`Hi, I'm interested in Sobha Aranya (Karma Lakelands). Name: ${name}, Phone: ${phone}, Budget: ${budget || 'NA'}, Visit: ${visit_date || 'NA'}`);
+          window.open(`https://wa.me/919711197200?text=${wmsg}`, '_blank');
+
+          form.reset();
+          toast.style.display = 'block';
+          setTimeout(()=>toast.style.display = 'none', 4500);
+          note.textContent = 'Thanks — our luxury specialist will contact you shortly.';
+        } catch (err) {
+          // fallback: prompt to contact via WhatsApp
+          note.innerHTML = 'Submission failed. Please contact via <a href="https://wa.me/919711197200" target="_blank" rel="noopener">WhatsApp</a> or call +91 9711197200.';
+        }
+      });
+    })();
+
+    // accessibility: add keyboard outline class
+    (function(){
+      function handleFirstTab(e){
+        if(e.key === 'Tab'){
+          document.body.classList.add('user-is-tabbing');
+          window.removeEventListener('keydown', handleFirstTab);
+        }
+      }
+      window.addEventListener('keydown', handleFirstTab);
+    })();
+
+  </script>
+</body>
+</html>
